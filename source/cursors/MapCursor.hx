@@ -608,7 +608,7 @@ class MapCursor implements UpdatingEntity implements HideableEntity implements O
 		{	
 			// Set up new tweens
 			newTween = FlxTween.num(0, corner.width, 1, {ease: FlxEase.circInOut, 
-				startDelay: .20, loopDelay: .20, type: FlxTween.LOOPING}, 
+				startDelay: .20, loopDelay: .20, type: FlxTweenType.LOOPING}, 
 				bounceFunc.bind(corner, cornerType));
 			
 			cornerTweenArr.push(newTween);
@@ -658,7 +658,7 @@ class MapCursor implements UpdatingEntity implements HideableEntity implements O
 		for (corner in currCornerArr)
 		{	
 			// Set up new tweens
-			newTween = FlxTween.num(0, 1, 1, {type: FlxTween.LOOPING}, stillFunc.bind(corner));
+			newTween = FlxTween.num(0, 1, 1, {type: FlxTweenType.LOOPING}, stillFunc.bind(corner));
 			cornerTweenArr.push(newTween);
 			
 			// Call the tween's helper function to set initial position.
